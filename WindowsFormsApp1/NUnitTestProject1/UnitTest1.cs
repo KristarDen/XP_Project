@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using System;
+using WindowsFormsApp1;
 
 namespace NUnitTestProject1
 {
@@ -13,14 +14,10 @@ namespace NUnitTestProject1
         [Test]
         public void ArabianCalculatorTest()
         {
-            Random rnd = new Random();
+            var a = new Sum();
 
-            decimal Num1 = rnd.Next(-100, 100);
-            decimal Num2 = rnd.Next(-100, 100);
+            Assert.isEqual(a != null);
 
-            ushort operation = rnd()
-
-            Assert.Pass();
         }
     }
 }

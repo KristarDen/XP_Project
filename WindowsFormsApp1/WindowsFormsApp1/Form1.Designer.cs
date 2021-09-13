@@ -35,6 +35,7 @@ namespace WindowsFormsApp1
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Second = new System.Windows.Forms.Label();
+            this.GetResult = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,11 +90,21 @@ namespace WindowsFormsApp1
             this.Second.TabIndex = 5;
             this.Second.Text = "label2";
             // 
+            // GetResult
+            // 
+            this.GetResult.Location = new System.Drawing.Point(171, 178);
+            this.GetResult.Name = "GetResult";
+            this.GetResult.Size = new System.Drawing.Size(75, 23);
+            this.GetResult.TabIndex = 6;
+            this.GetResult.Text = "Get result";
+            this.GetResult.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(445, 479);
+            this.Controls.Add(this.GetResult);
             this.Controls.Add(this.Second);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
@@ -101,6 +112,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.FirstNumber);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -116,6 +128,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Second;
+        private System.Windows.Forms.Button GetResult;
     }
 }
 
