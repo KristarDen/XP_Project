@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WindowsFormsApp1;
 
+
 namespace UnitTestProject2
 {
     [TestClass]
@@ -12,11 +13,11 @@ namespace UnitTestProject2
         {
             var sum = new Sum();
 
-            Assert.IsTrue(sum.SumAction("bf", "1") == null);
-            Assert.IsTrue(sum.SumAction("1", "bf") == null);
-            Assert.IsTrue(sum.SumAction("bf", "bf") == null);
+            Assert.IsTrue(sum.SumAction("bf", "1") == 0);
+            Assert.IsTrue(sum.SumAction("1", "bf") == 0);
+            Assert.IsTrue(sum.SumAction("bf", "bf") == 0);
 
-            Assert.IsTrue(sum.SumAction("2", "4") == 6.ToString());
+            Assert.IsTrue(sum.SumAction("2", "4") == decimal.Parse(6.ToString()));
 
 
         }

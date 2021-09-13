@@ -9,7 +9,7 @@ namespace WindowsFormsApp1
     /**
     * Class for conver Rom number in Arabic and back 
     */
-    class RomanNum
+    static class RomanNum
     {
         static Dictionary<int, string> ra = new Dictionary<int, string>
         { { 1000, "M" },  { 900, "CM" },  { 500, "D" },  { 400, "CD" },  { 100, "C" },

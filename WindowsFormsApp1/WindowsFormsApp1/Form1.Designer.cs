@@ -33,10 +33,15 @@ namespace WindowsFormsApp1
             this.SecondNumber = new System.Windows.Forms.TextBox();
             this.Result_label = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Result = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Second = new System.Windows.Forms.Label();
             this.GetResult = new System.Windows.Forms.Button();
+            this.ArabRadioBut = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.RomRadioBut = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // FirstNumber
@@ -45,7 +50,6 @@ namespace WindowsFormsApp1
             this.FirstNumber.Name = "FirstNumber";
             this.FirstNumber.Size = new System.Drawing.Size(100, 20);
             this.FirstNumber.TabIndex = 0;
-            this.FirstNumber.TextChanged += new System.EventHandler(this.FirstNumber_TextChanged);
             // 
             // SecondNumber
             // 
@@ -53,7 +57,6 @@ namespace WindowsFormsApp1
             this.SecondNumber.Name = "SecondNumber";
             this.SecondNumber.Size = new System.Drawing.Size(100, 20);
             this.SecondNumber.TabIndex = 1;
-            this.SecondNumber.TextChanged += new System.EventHandler(this.SecondNumber_TextChanged);
             // 
             // Result_label
             // 
@@ -65,14 +68,23 @@ namespace WindowsFormsApp1
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.Result);
             this.groupBox1.Controls.Add(this.Result_label);
-            this.groupBox1.Location = new System.Drawing.Point(58, 207);
+            this.groupBox1.Location = new System.Drawing.Point(58, 309);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(302, 64);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Result";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // Result
+            // 
+            this.Result.AutoSize = true;
+            this.Result.Location = new System.Drawing.Point(47, 0);
+            this.Result.Name = "Result";
+            this.Result.Size = new System.Drawing.Size(0, 13);
+            this.Result.TabIndex = 3;
             // 
             // label1
             // 
@@ -100,12 +112,48 @@ namespace WindowsFormsApp1
             this.GetResult.TabIndex = 6;
             this.GetResult.Text = "Get result";
             this.GetResult.UseVisualStyleBackColor = true;
+            this.GetResult.Click += new System.EventHandler(this.GetResult_Click);
+            // 
+            // ArabRadioBut
+            // 
+            this.ArabRadioBut.AutoSize = true;
+            this.ArabRadioBut.Location = new System.Drawing.Point(111, 28);
+            this.ArabRadioBut.Name = "ArabRadioBut";
+            this.ArabRadioBut.Size = new System.Drawing.Size(55, 17);
+            this.ArabRadioBut.TabIndex = 7;
+            this.ArabRadioBut.TabStop = true;
+            this.ArabRadioBut.Text = "Arabic";
+            this.ArabRadioBut.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.RomRadioBut);
+            this.groupBox2.Controls.Add(this.ArabRadioBut);
+            this.groupBox2.Location = new System.Drawing.Point(70, 238);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(208, 65);
+            this.groupBox2.TabIndex = 8;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Choice answer result";
+            // 
+            // RomRadioBut
+            // 
+            this.RomRadioBut.AutoSize = true;
+            this.RomRadioBut.Location = new System.Drawing.Point(9, 28);
+            this.RomRadioBut.Name = "RomRadioBut";
+            this.RomRadioBut.Size = new System.Drawing.Size(67, 17);
+            this.RomRadioBut.TabIndex = 0;
+            this.RomRadioBut.TabStop = true;
+            this.RomRadioBut.Text = "Romanic";
+            this.RomRadioBut.UseVisualStyleBackColor = true;
+            this.RomRadioBut.CheckedChanged += new System.EventHandler(this.RadioButton2_CheckedChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(445, 479);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.GetResult);
             this.Controls.Add(this.Second);
             this.Controls.Add(this.label1);
@@ -114,9 +162,10 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.FirstNumber);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,6 +180,10 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Second;
         private System.Windows.Forms.Button GetResult;
+        private System.Windows.Forms.Label Result;
+        private System.Windows.Forms.RadioButton ArabRadioBut;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton RomRadioBut;
     }
 }
 
