@@ -45,6 +45,7 @@ namespace WindowsFormsApp1
             this.FirstNumber.Name = "FirstNumber";
             this.FirstNumber.Size = new System.Drawing.Size(100, 20);
             this.FirstNumber.TabIndex = 0;
+            this.FirstNumber.TextChanged += new System.EventHandler(this.FirstNumber_TextChanged);
             // 
             // SecondNumber
             // 
@@ -52,6 +53,7 @@ namespace WindowsFormsApp1
             this.SecondNumber.Name = "SecondNumber";
             this.SecondNumber.Size = new System.Drawing.Size(100, 20);
             this.SecondNumber.TabIndex = 1;
+            this.SecondNumber.TextChanged += new System.EventHandler(this.SecondNumber_TextChanged);
             // 
             // Result_label
             // 
